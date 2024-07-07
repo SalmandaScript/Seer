@@ -1,0 +1,959 @@
+<!DOCTYPE html> 
+<html lang="en" manifest="https://salmandascript.github.io/Seer"/>
+  <head>
+  	<title>Seer</title>
+  	
+    <meta charset="UTF-8" />
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <meta name="description" content="Seer way of the Constellation" />
+
+		<meta name="keywords" content="Zodiac, Horoscope, Star Sign," />
+
+		<meta name="Author" content="Salmanda" />
+
+		<meta name="revised" content="Capital Seer,3/7/202" />
+
+		<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+
+		<meta name="mobile-web-app-capable" content="yes" />
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+
+		<meta name="msapplication-starturl" content="" />
+
+<meta name="theme-color" content="teal"/> 
+
+<link rel="icon" type="image" href="Eye.png"/>
+
+<link rel="stylesheet" href="jquery-ui.min.css" type="text/css"/>
+
+	 <link rel="stylesheet" href="seer.css" type="text/css"/>
+	 
+	 <link rel="stylesheet" href="bootstrap.min.css" type="text/css"/>
+	 
+<style>
+	body{
+	background: linear-gradient(to right, maroon, teal);
+	text-align: center;
+	}
+</style>
+
+<script type="text/javascript">
+        function startTime( )
+        {var today=new Date();
+        var h=today.getHours();
+        var m=today.getMinutes();
+        var s=today.getSeconds();
+        m=checkTime(m);
+        s=checkTime(s);
+        document.getElementById( 'txt').innerHTML=h + ":" +m+":" + s;
+        var t=setTimeout(startTime, 500); 
+}
+        function checkTime( i) { 
+        if (i < 10) {i = "0" + i};
+        return i; 
+} 
+        
+		</script>
+		<!--javascript-->
+		
+</head>
+ 
+<body onload="startTime(); myZodiac()" style="border: groove; border-radius: 10pt; margin: 8pt; margin-top:30pt;"><br>
+
+ <div style="background: linear-gradient(to right, teal, maroon);"><br>
+	<img style="border: groove white 2px; border-radius: 6px" src="Eye.png"/><br><br>
+	
+	<div class="btn-group">
+<button onclick="salmanda1();" id="demo1" style="color: white; background-color: orange; border-radius: 4pt" data-toggle="dropdown" class="btn btn-default dropdown-toggle">Select your Birthday and Month below</button> 
+
+<ul style="border: groove white 2pt" class="dropdown-menu royal2"> 
+<center><li><button onclick="salmandai();" id="demoi"
+style="border-color: white" type="button" class="btn btn-secondary btn-lg" data-toggle="modal" data-target="#myModal1">21 March- 19 April</button></li>
+	
+	<li class="divider"></li>
+	<li><button onclick="salmandaii();" id="demoii"
+	 style="border-color: white " type="button" class="btn btn-secondary btn-lg" data-toggle="modal" data-target="#myModal2"> 20 Apirl- 20 May</button></li>
+
+<li class="divider"></li>
+<li ><button onclick="salmandaiii();" id="demoiii"
+ style="border-color: white" type="button" class="btn btn-secondary btn-lg" data-toggle="modal" data-target="#myModal3">21 May- 20 June</button></li>
+
+<li class="divider"></li> 
+<li><button onclick="salmandaiv();" id="demoiv"
+ style="border-color: white" type="button" class="btn btn-secondary btn-lg" data-toggle="modal" data-target="#myModal4">21 June- 22 July</button></li>
+
+<li class="divider"></li> 
+<li><button onclick="salmandav();" id="demov" style="border-color: white " type="button" class="btn btn-secondary btn-lg" data-toggle="modal" data-target="#myModal5">23 July- 22 August</button></li>
+
+<li class="divider"></li> 
+<li><button onclick="salmandavi();" id="demovi" style="border-color: white" type="button" class="btn btn-secondary btn-lg" data-toggle="modal" data-target="#myModal6">23 August- 22 September</button></li>
+
+<li class="divider"></li> 
+<li><button onclick="salmandavii();" id="demovii" style="border-color: white" type="button" class="btn btn-secondary btn-lg" data-toggle="modal" data-target="#myModal7">23 September- 22 October</button></li>
+
+<li class="divider"></li> 
+<li><button onclick="salmandaviii();" id="demoviii" style="border-color: white" type="button" class="btn btn-secondary btn-lg" data-toggle="modal" data-target="#myModal8">23 October- 21 November</button></li>
+
+<li class="divider"></li> 
+<li><button onclick="salmandaix();" id="demoix" style="border-color: white" type="button" class="btn btn-secondary btn-lg" data-toggle="modal" data-target="#myModal9">22 November- 21 December</button></li>
+
+<li class="divider"></li> 
+<li><button onclick="salmandax();" id="demox" style="border-color: white" type="button" class="btn btn-secondary btn-lg" data-toggle="modal" data-target="#myModal10">22 December- 19 January</button></li>
+
+<li class="divider"></li> 
+<li><button onclick="salmandaxi();" id="demoxi" style="border-color: white" type="button" class="btn btn-secondary btn-lg" data-toggle="modal" data-target="#myModal11">20 January- 18 February</button></li>
+
+<li class="divider"></li> 
+<li><button onclick="salmandaxii();" id="demoxii" style="border-color: white" type="button" class="btn btn-secondary btn-lg" data-toggle="modal" data-target="#myModal12">19 February- 20 March</button></li></center>
+</ul></div><br><br><br>
+
+ <span>●•SEER●•</span><br><br><br>
+ <span style="font-style: italic; font-size: 12pt">Way of the Constellation☆</span><br><br><br>
+ 
+<!--Learn more modal-->
+ <button onclick="salmanda16();" id="demo16" style="border-color: white" type="button" class="btn btn-secondary btn-sm" data-toggle="modal" data-target="#myModalL">📑 Learn More</button><br><br>
+ 
+
+<div id="myModalL" class="modal fade" >
+<div class="modal-dialog; modal-lg"> 
+<div class="modal-content"> 
+<div class="modal-header"> 
+
+<h5 style="text-align: center" class="modal-title">HOW ZODIAC SIGNS WORK WITH EACH OTHER.</h5> 
+</div> 
+<div class="modal-body; level" style="color: orange; text-shadow: 2px 2px 2px teal; font-style:italic; font-size:12pt"> 
+
+
+<p>Zodiac signs can also help you understand how you get along with others. Some signs match really well and can be great friends or even have a strong Love connection. Here are some examples</p>
+
+<p>1. FIRE SIGNS (ARIES, LEO, SAGITTARIUS)</p>
+	These signs are full of energy and can be very inspiring. They work well with Air signs like Gemini, Libra, and Aquarius, who can share their ideas and energy.
+	<br><br>
+		
+		<p>2. EARTH SIGNS (TAURUS, VIRGO, CAPRICORN)</p>
+			These signs are practicle and stable. They match well with Water signs like Cancer, Scorpio and Pisces, who provide ensightful depth and understanding.
+<br><br>
+	
+<p>3. AIR SIGNS (GEMINI, LIBRA, AQUARIUS)</p>
+	These signs love to nthink and talk. They get along well with Fire signs, who are also dynamic and enegetic
+	<br><br>
+		
+		<p>4. WATER SIGNS (CANCER, SCORPIO, PISCES)</p>
+			These signs are emotional and intuitive. They connect deeply with Earth signs, who provide the stability and support water signs cherish.
+			<br><br>
+				
+<p>WHY KNOWING ZODIAC SIGN IS FUN</p>
+	Knowing your Zodiac sign can help you to understand yourself better. Its's fun to see which traits you might share with your sign and which ones are different. You can also look up the signs of your friends snd family to see what your stars say about your relationship with them.<br>
+		Zodiac signs are a fun way to learn more about yourself and others. By knowing which sign you are, you can discover new things about your personality, see how you might match with other people, and even find out what kind of things you might be good at.
+</div> 
+<div class="modal-footer"> 
+<button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Close &times;
+</button> 
+</div> 
+</div> 
+</div> 
+</div>
+ <!--Learn more modal-->
+ 
+ <div style="background-color: gray; margin: 28pt; border-radius: 6pt" align="center" id="txt"></div>
+ 
+<nav>
+
+<!--popup menu-->
+<div class="btn-group dropup"> 
+<div class="btn-group"> 
+<button onclick="salmanda2();" id="demo2"
+ style="border: solid white 1pt; background: orange"
+ type="button" data-toggle="dropdown" class="btn btn-warning dropdown-toggle btn-sm">📒 Menu</button> 
+ 
+<ul class="dropdown-menu royal2"> 
+<center><li><button onclick="salmanda6(); newsChannel()" id="demo6" style="border-color: white" type="button" class="btn btn-secondary btn-sm">📰 News Channel</button>
+	
+	<!--<li class="divider"></li>
+	<li><button onclick="salmanda7();" id="demo7" style="border-color: white" type="button" class="btn btn-secondary btn-sm" data-toggle="modal" data-target="#myModal5"
+>🐒 Tourism</button></li>-->
+
+<!--<a href="file:///storage/emulated/0/salmanda/onlineRadio/musicStore/musicStore.html">-->
+	
+	<!--<button onclick="salmanda8();" id="demo8" style="border-color: white" type="button" class="btn btn-secondary btn-sm"
+	 onclick="alert('This Site is still under development.');">📚 Education</button> </a></li>-->
+
+<li class="divider"></li> 
+<li><button onclick="salmanda9(); programming()" id="demo9" style="border-color: white" type="button" class="btn btn-secondary btn-sm">📟 Programming</button></li>
+
+<li class="divider"></li> 
+<li><button onclick="salmanda10(); linkWikipedia()" id="demo10" style="border-color: white" type="button" class="btn btn-secondary btn-sm"><img style="width: 14pt" src="wikipeadia.png"/> Wikipeadia</button></li>
+
+<li class="divider"></li> 
+<li><button onclick="salmanda11(); salmandaMusiq()" id="demo11" style="border-color: white" type="button" class="btn btn-secondary btn-sm">🎼 My Music</button></li>
+
+<!--<li class="divider"></li> 
+<li><button onclick="salmanda12();" id="demo12" style="border-color: white" type="button" class="btn btn-secondary btn-sm" data-toggle="modal" data-target="#myModal6"><img style="width: 15pt" src="chatGPT.png"/> ChatGPT</button></li>-->
+
+<li class="divider"></li> 
+<li><button onclick="salmanda13(); movieChannel()" id="demo13" style="border-color: white" type="button" class="btn btn-secondary btn-sm">🎬 Movie Channel</button></li>
+
+<li class="divider"></li> 
+<li><button onclick="salmanda14(); royalFM()" id="demo14" style="border-color: white" type="button" class="btn btn-secondary btn-sm"><img style="width: 16pt" src="Royal.png"/> RoyalFM</button></li>
+
+<li class="divider"></li> 
+<li><button onclick="salmanda15(); seer()" id="demo15" style="border-color: white" type="button" class="btn btn-secondary btn-sm"><img style=" width: 16pt" src="Eye.png"/> Seer</button></li>
+</center>
+</ul> 
+</div> 
+</div> 
+<!--End popup menu-->
+
+<button onclick="salmanda3(); africaOnline();" id="demo3"
+ style="border-color: white; color: white" type="button" class="btn btn-secondary btn-sm">🏠 Home</button>
+
+<button id = "opener-7"
+ onclick="salmanda4(); help();" id="demo4"
+ style="border-color: white; color: white" type="button" class="btn btn-secondary btn-sm">ℹ Help</button>
+
+<button onclick="salmanda5(); contact();" id="demo5" style="border-color: white; color: white" type="button" class="btn btn-secondary btn-sm">👥 Contact</button>
+</nav></div>
+
+<!--First Star Sign-->
+<div id="myModal1" class="modal fade" >
+<div class="modal-dialog; modal-lg"> 
+<div class="modal-content"> 
+<div class="modal-header"> 
+
+<h5 style="text-align: center" class="modal-title">NUMBER 1 ARIES ZODIAC SIGN ♈.</h5> 
+</div> 
+<div class="modal-body; level" style="color: gray"><br>
+
+<div style="background: teal; border: groove white 2px; border-radius: 8px"><a href="aries.png" Download="aries.png">
+<img class="zodiac" src="aries.png"/></a> &nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+<img class="zodiac" src="aries2.png"/></div><br>
+
+<p class="horoscope1">People born under the Aries zodiac sign, March 21 - April 19, are known for several key characteristics:<br><br>
+
+<span class="trait">COURAGEOUS:</span>Aries individuals are known for their courage and willingness to take risks. They are often pioneers and leaders who are unafraid to blaze new trails.<br><br>
+	
+<span class="trait">ENERGETIC:</span>They have a high level of energy and enthusiasm, which fuels their drive to pursue their goals and interests passionately.<br><br>
+
+<span class="trait">ASSERTIVE:</span>Aries individuals are assertive and decisive. They know what they want and are not afraid to go after it, often displaying strong leadership qualities.<br><br>
+
+<span class="trait">OPTIMISTIC:</span>They have a positive outlook on life and are generally optimistic about their future and possibilities.
+<br><br>
+	
+<span class="trait">INDEPENDENT:</span>Aries individuals value their independence and freedom. They prefer to make their own decisions and can be quite self-reliant.<br><br>
+
+<span class="trait">IMPULSIVE:</span>Due to their energetic and spontaneous nature, Aries individuals can be impulsive in their actions and decisions.
+<br><br>
+	
+<span class="trait">COMPETITIVE:</span>They thrive in competitive situations and enjoy challenges that allow them to showcase their skills and abilities.<br><br>
+
+<span class="trait">PASSIONATE:</span>Aries individuals are passionate about their interests and pursuits, putting their heart and soul into everything they do.<br><br>
+
+<span class="trait">SHORT-TEMPERED:</span>They can have a quick temper and may be prone to outbursts of anger or frustration, especially when things don't go their way.<br><br>
+
+<span class="trait">INITIATIVE:</span>Aries individuals are natural initiators who often take the lead in starting new projects or ventures. They have a pioneering spirit that drives them to explore and innovate.<br><br>
+
+These characteristics combine to create individuals who are dynamic, adventurous, and fiercely independent. Aries individuals often have a zest for life and a strong desire to make a mark on the world through their actions and achievements.</p> 
+</div> 
+<div class="modal-footer"> 
+<button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Close &times;
+</button> 
+</div> 
+</div> 
+</div> 
+</div>
+<!--End First Star Sign-->
+
+<!--Second Star Sign-->
+<div id="myModal2" class="modal fade" >
+<div class="modal-dialog; modal-lg"> 
+<div class="modal-content"> 
+<div class="modal-header"> 
+
+<h5 style="text-align: center" class="modal-title">NUMBER 2 TAURUS ZODIAC SIGN ♉.</h5> 
+</div> 
+<div class="modal-body; level" style="color: gray"><br>
+
+<div style="background: teal; border: groove white 2px; border-radius: 8px"><a href="taurus.png" Download="taurus.png">
+<img class="zodiac" src="taurus.png"/></a></a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<img class="zodiac" src="taurus2.png"/></div><br>
+
+<p class="horoscope1">People born under the Taurus zodiac sign, April 20 - May 20, are known for several key characteristics:<br><br>
+
+<span class="trait">RELIABILITY:</span> Taurus individuals are highly dependable and known for their steadfast nature. They are often the ones others turn to for support and stability.<br><br>
+
+<span class="trait">PATIENCE:</span> They possess great patience and endurance, able to persist through challenges and setbacks without losing their composure.<br><br>
+	
+<span class="trait">PRACTICALITY:</span> Taurus individuals have a strong sense of practicality and are grounded in reality. They prefer tangible results and solutions over abstract ideas.<br><br>
+
+<span class="trait">
+SENSUALITY:</span> They appreciate and enjoy sensory experiences, including touch, taste, and aesthetics. Taurus individuals often have a strong connection to physical pleasures and comforts.
+<br><br>
+	
+<span class="trait">
+STABILITY:</span> Taurus values security and stability in all aspects of life, including relationships, career, and finances. They strive for consistency and predictability.
+<br><br>
+	
+<span class="trait">
+DETERMINATION:</span> Once a Taurus sets their mind on a goal, they are incredibly determined and persistent in achieving it. They have a strong work ethic and are willing to put in the effort required.<br><br>
+
+<span class="trait">
+MATERIALISM:</span> Taurus individuals often have an appreciation for material comforts and possessions. They enjoy the finer things in life and may work hard to attain them.<br><br>
+
+<span class="trait">
+LOYALTY:</span> They are fiercely loyal to their loved ones and close friends. Taurus individuals value long-lasting relationships built on trust and commitment.
+<br><br>
+	
+<span class="trait">
+STUBBORNNESS:</span> Taurus can be quite stubborn and resistant to change, preferring stability and familiarity. Once they have made up their mind, it can be challenging to sway them.<br><br>
+
+<span class="trait">
+LOVE OF NATURE:</span> Many Taurus individuals have a deep connection to nature and the outdoors. They may find solace and peace in natural environments.<br><br>
+
+These characteristics combine to create individuals who are reliable, practical, and deeply connected to the physical world and their senses. Taurus individuals often seek security and comfort while valuing loyalty and stability in their relationships and endeavors.</p> 
+
+</div> 
+<div class="modal-footer"> 
+<button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Close &times;
+</button> 
+</div> 
+</div> 
+</div> 
+</div>
+<!--End Second Star Sign-->
+
+<!--Third Star Sign-->
+<div id="myModal3" class="modal fade" >
+<div class="modal-dialog; modal-lg"> 
+<div class="modal-content"> 
+<div class="modal-header"> 
+
+<h5 style="text-align: center" class="modal-title">NUMBER 3 GEMINI ZODIAC SIGN ♊</h5> 
+</div> 
+<div class="modal-body; level" style="color: gray"> 
+
+<br><div style="background: teal; border: groove white 2px; border-radius: 8px"><a href="gemini.png" Download="gemini.png"><img class="zodiac" src="gemini.png"/></a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<img class="zodiac" src="gemini2.png"/></div><br>
+
+<p class="horoscope1">People born under the Gemini zodiac sign, May 21 - June 20, are known for several key characteristics:<br><br>
+
+<span class="trait">
+ADAPTABILITY:</span> Geminis are versatile and easily adaptable to different situations and people.
+<br><br>
+	
+<span class="trait">
+CURIOSITY:</span> They have a strong intellectual curiosity and are constantly seeking new experiences and knowledge.<br><br>
+
+<span class="trait">
+COMMUNICATION SKILLS:</span> Geminis are excellent communicators, both in speaking and writing. They are often articulate and witty.
+<br><br>
+
+<span class="trait">
+DUAL NATURE:</span> Represented by the Twins, Geminis can have dual personalities or interests, which can sometimes make them seem contradictory.<br><br>
+
+<span class="trait">
+SOCIAL NATURE:</span> They are typically sociable and enjoy interacting with a wide range of people. Geminis are often the life of the party due to their lively and engaging personalities.
+<br><br>
+	
+	<span class="trait">
+INTELLECTUAL:</span> Geminis have a sharp intellect and are quick learners. They enjoy mental stimulation and engaging in intellectually stimulating conversations.<br><br>
+
+<span class="trait">
+RESTLESSNESS:</span> Geminis can be restless and easily bored, often seeking variety and change in their lives.<br><br>
+
+<span class="trait">
+INDECISIVENESS:</span> Due to their dual nature and ability to see multiple sides of an issue, Geminis can sometimes struggle with decision-making.<br><br>
+
+<span class="trait">
+SPONTANEITY:</span> They are known for their spontaneous and adventurous spirit, always up for trying something new.<br><br>
+
+<span class="trait">
+PLAYFULNESS:</span> Geminis often have a youthful and playful demeanor, enjoying humor and fun in their interactions.<br><br>
+
+These characteristics combine to create individuals who are dynamic, communicative, and intellectually curious, often seeking excitement and variety in life.</p> 
+</div> 
+<div class="modal-footer"> 
+<button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Close &times;
+</button> 
+</div> 
+</div> 
+</div> 
+</div>
+<!--End Third Star Sign-->
+
+<!--Fourth Star Sign-->
+<div id="myModal4" class="modal fade" >
+<div class="modal-dialog; modal-lg"> 
+<div class="modal-content"> 
+<div class="modal-header"> 
+
+<h5 style="text-align: center" class="modal-title">NUMBER 4 CANCER ZODIAC SIGN ♋.</h5> 
+</div> 
+<div class="modal-body; level" style="color: gray"> 
+
+<br><div style="background: teal; border: groove white 2px; border-radius: 8px"><a href="cancer.png" Download="cancer.png">
+<img class="zodiac" src="cancer.png"/></a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<img class="zodiac" src="cancer2.png"/></div><br>
+
+<p class="horoscope1">People born under the star sign Cancer (June 21 - July 22) are often described with these characteristics:<br><br>
+
+<span class="trait">
+EMOTIONAL SENSITIVITY:</span> Cancers are deeply intuitive and sensitive, often feeling the emotions of others.<br><br>
+
+<span class="trait">
+PROTECTIVE NATURE:</span> They are known for their strong desire to protect and nurture those they care about, often assuming a caregiving role.<br><br>
+
+<span class="trait">
+LOYALTY:</span> Cancerians are fiercely loyal to their friends and family, valuing long-term relationships and stability.
+<br><br>
+	
+<span class="trait">
+MOODINESS:</span> Due to their strong emotional nature, they can experience mood swings and shifts in energy levels.<br><br>
+
+<span class="trait">
+HOME AND FAMILY ORIENTATION:</span> They have a strong attachment to their home and family, often seeking security and comfort in familiar surroundings.<br><br>
+
+<span class="trait">
+INTUITIVE AND IMAGINATIVE:</span> Cancers rely heavily on their intuition and imagination, often having a creative and artistic streak.<br><br>
+
+<span class="trait">
+CAUTIOUS APPROACH:</span> They tend to approach new situations with caution and may take time to trust others fully.<br><br>
+
+<span class="trait">
+TENACITY:</span> Once they set their mind on something, Cancers are determined and persistent in achieving their goals.<br><br>
+
+<span class="trait">
+SENTIMENTAL VALUE:</span> They often cherish sentimental objects and memories, finding comfort in nostalgia.<br><br>
+
+<span class="trait">
+NEED FOR EMOTIONAL SECURITY:</span> Above all, Cancers seek emotional security and stability in their relationships and endeavors.
+<br><br>
+	
+These traits collectively shape the personality and behavior of individuals born under the Cancer zodiac sign.</p> 
+</div>
+<div class="modal-footer"> 
+<button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Close &times;
+</button> 
+</div> 
+</div> 
+</div> 
+</div>
+<!--End Fourth Star Sign-->
+
+<!--Fifth Star Sign-->
+<div id="myModal5" class="modal fade" >
+<div class="modal-dialog; modal-lg"> 
+<div class="modal-content"> 
+<div class="modal-header"> 
+
+<h5 style="text-align: center" class="modal-title">NUMBER 5 LEO ZODIAC SIGN ♌.</h5> 
+</div> 
+<div class="modal-body; level" style="color: gray"> 
+
+<br><div style="background: teal; border: groove white 2px; border-radius: 8px"><a href="leo.png" Download="leo.png">
+<img class="zodiac" src="leo.png"/></a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<img class="zodiac" src="leo2.png"/></div><br>
+
+<p class="horoscope1">People born under the Leo zodiac sign, July 23 - August 22, are known for several key characteristics:<br><br>
+
+<span class="trait">
+CONFIDENCE:</span> Leos are typically confident and have a strong sense of self-assurance.<br><br>
+
+<span class="trait">
+LEADERSHIP:</span> They often possess natural leadership qualities and enjoy taking charge.<br><br>
+
+<span class="trait">
+WARMTH:</span> Leos are warm-hearted and generous, often making them popular among friends and family.
+<br><br>
+
+<span class="trait">
+CREATIVITY:</span> They have a creative and imaginative streak, enjoying activities that allow them to express themselves artistically.<br><br>
+
+<span class="trait">
+DETERMINATION:</span> Leos are known for their determination and persistence in pursuing their goals.<br><br>
+
+<span class="trait">
+CHARISMA:</span> They tend to have a charismatic personality that draws others to them.<br><br>
+
+<span class="trait">
+LOYALTY:</span> Leos are loyal to their loved ones and friends, valuing strong bonds and connections.<br><br>
+
+<span class="trait">
+DRAMATIC FLAIR:</span> They may have a theatrical or dramatic flair, enjoying attention and being in the spotlight.<br><br>
+
+<span class="trait">
+ASSERTIVENESS:</span> Leos are assertive and straightforward in their communication style.
+<br><br>
+	
+<span class="trait">
+PASSION:</span> They approach life with passion and enthusiasm, often inspiring those around them.
+<br><br>
+	
+These traits combine to make Leos confident leaders who enjoy being at the center of things while maintaining warmth and loyalty in their relationships.</p> 
+
+</div> 
+<div class="modal-footer"> 
+<button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Close &times;
+</button> 
+</div> 
+</div> 
+</div> 
+</div>
+<!--End Second Star Sign-->
+
+<!--Second Star Sign-->
+<div id="myModal6" class="modal fade" >
+<div class="modal-dialog; modal-lg"> 
+<div class="modal-content"> 
+<div class="modal-header"> 
+
+<h5 style="text-align: center" class="modal-title">NUMBER 6 VIRGO ZODIAC SIGN ♍.</h5> 
+</div> 
+<div class="modal-body; level" style="color: gray"> 
+
+<br><div style="background: teal; border: groove white 2px; border-radius: 8px"><a href="virgo.png" Download="virgo.png">
+<img class="zodiac" src="virgo.png"/></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<img class="zodiac" src="virgo2.png"/></div><br>
+
+<p class="horoscope1">People born under the Virgo zodiac sign, August 23 - September 22, are known for several key characteristics:<br><br>
+
+<span class="trait">
+ANALYTICAL:</span> Virgos have a keen analytical mind and are known for their attention to detail. They excel in tasks that require precision and thoroughness.
+<br><br>
+	
+<span class="trait">
+PRACTICAL:</span> They are grounded and practical individuals who prefer to deal with tangible facts rather than abstract concepts.
+<br><br>
+	
+<span class="trait">
+HARDWORKING:</span> Virgos are dedicated and industrious. They are willing to put in the effort needed to achieve their goals and often have a strong work ethic.
+<br><br>
+	
+<span class="trait">
+ORGANISED:</span> They thrive on structure and orderliness. Virgos prefer things to be neat and tidy, both in their physical surroundings and in their schedules.<br><br>
+
+<span class="trait">
+RELIABLE:</span> Others can rely on Virgos to fulfill their commitments and responsibilities. They are dependable and trustworthy individuals.
+<br><br>
+	
+<span class="trait">
+MODEST:</span> Virgos tend to be modest and humble, preferring to let their actions speak louder than their words. They are not ones to seek attention or praise.
+<br><br>
+	
+<span class="trait">
+INTELLIGENT:</span> They have a sharp intellect and a thirst for knowledge. Virgos enjoy learning and are often well-read individuals.<br><br>
+
+<span class="trait">
+CAUTIOUS:</span> Virgos are careful and prudent in their decision-making. They weigh the pros and cons before taking action and prefer to minimize risks.<br><br>
+
+<span class="trait">
+HEALTH-CONSCIOUS:</span> They are typically mindful of their well-being and may pay close attention to diet, exercise, and overall health practices.<br><br>
+
+<span class="trait">
+PERFECTIONISTIC:</span> Virgos have high standards for themselves and others. While this can drive them to excel, it may also lead to self-criticism or being overly critical of others.<br><br>
+
+These traits collectively contribute to the Virgo's reputation for being reliable, industrious, and detail-oriented individuals in both personal and professional settings.</p> 
+
+</div> 
+<div class="modal-footer"> 
+<button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Close &times;
+</button> 
+</div> 
+</div> 
+</div> 
+</div>
+<!--End Second Star Sign-->
+
+<!--Second Star Sign-->
+<div id="myModal7" class="modal fade" >
+<div class="modal-dialog; modal-lg"> 
+<div class="modal-content"> 
+<div class="modal-header"> 
+
+<h5 style="text-align: center" class="modal-title">NUMBER 7 LIBRA ZODIAC SIGN ♎.</h5> 
+</div> 
+<div class="modal-body; level" style="color: gray"> 
+
+<br><div style="background: teal; border: groove white 2px; border-radius: 8px"><a href="libra.png" Download="libra.png">
+<img class="zodiac" src="libra.png"/></a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<img class="zodiac" src="libra2.png"/></div><br>
+
+<p class="horoscope1">People born under the Libra sign, September 23 - October 22, are known for several characteristic traits:<br><br>
+
+<span class="trait">
+DIPLOMATIC:</span> Libras are skilled at seeing different perspectives and finding common ground. They strive for harmony and balance in relationships and situations.
+<br><br>
+	
+<span class="trait">
+SOCIAL:</span> They enjoy being around others and are often the peacemakers in social settings. Libras are typically charming and have good social skills.<br><br>
+
+<span class="trait">
+FAIR-MINDED:</span> Libras have a strong sense of justice and fairness. They value equality and are often advocates for balance and fairness in their interactions.<br><br>
+
+<span class="trait">
+INTELLECTUAL:</span> They have a keen intellect and enjoy engaging in stimulating conversations. Libras appreciate art, culture, and beauty in all forms.<br><br>
+
+<span class="trait">
+CHARMING:</span> Libras possess a natural charm and grace that draws people to them. They are often polite, tactful, and know how to make others feel comfortable.
+<br><br>
+	
+<span class="trait">
+INDECISIVE:</span> Due to their desire to weigh all options and consider different perspectives, Libras can sometimes struggle with making decisions.<br><br>
+
+<span class="trait">
+PEACEFUL:</span> They avoid conflict and seek to create a harmonious environment. Libras prefer to resolve disagreements through compromise and diplomacy.<br><br>
+
+<span class="trait">
+AESTHETIC:</span> Libras have a strong appreciation for beauty and elegance. They often have a good sense of style and may be drawn to artistic pursuits.<br><br>
+
+<span class="trait">
+COOPERATIVE:</span> They are team players who value collaboration. Libras enjoy working together with others towards a common goal.
+<br><br>
+	
+<span class="trait">
+ROMANTIC:</span> Libras enjoy romantic gestures and relationships. They are attentive partners who value love and companionship.<br><br>
+
+These traits combine to form a personality that is diplomatic, social, and intellectually curious, with a strong sense of justice and a love for beauty and harmony.</p> 
+
+</div> 
+<div class="modal-footer"> 
+<button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Close &times;
+</button> 
+</div> 
+</div> 
+</div> 
+</div>
+<!--End Second Star Sign-->
+
+<!--Second Star Sign-->
+<div id="myModal8" class="modal fade" >
+<div class="modal-dialog; modal-lg"> 
+<div class="modal-content"> 
+<div class="modal-header"> 
+
+<h5 style="text-align: center" class="modal-title">NUMBER 8 SCORPIO ZODIAC SIGN ♏.</h5> 
+</div> 
+<div class="modal-body; level" style="color: gray"> 
+
+<br><div style="background: teal; border: groove white 2px; border-radius: 8px"><a href="scorpio.png" Download="scorpio">
+<img class="zodiac" src="scorpio.png"/></a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<img class="zodiac" src="scorpio2.png"/></div><br>
+
+<p class="horoscope1">Scorpios, born between October 23 and November 21, are known for several key characteristics:
+<br><br>
+	
+<span class="trait">
+INTENSE AND PASSIONATE:</span> Scorpios are deeply emotional and passionate individuals. They approach life with intensity and are known for their strong feelings and opinions.<br><br>
+
+<span class="trait">
+DETERMINED AND AMBITIOUS:</span> They are driven by their goals and ambitions. Once they set their sights on something, they will work tirelessly to achieve it.
+<br><br>
+	
+<span class="trait">
+RESOURCEFUL AND STRATEGIC:</span> Scorpios possess a keen intellect and are highly resourceful. They often excel at problem-solving and navigating challenges.<br><br>
+
+<span class="trait">
+MYSTERIOUS AND PRIVATE:</span> They tend to keep their true feelings and thoughts guarded, which adds to their air of mystery. Scorpios value their privacy and often have a complex inner life.<br><br>
+
+<span class="trait">
+RESILIENT AND PERSISTENT:</span> Scorpios are known for their resilience in the face of adversity. They have a strong ability to bounce back from setbacks and persevere through difficult times.<br><br>
+
+<span class="trait">
+LOYAL PROTECTIVE:</span> They are fiercely loyal to their loved ones and will go to great lengths to protect and defend them. Scorpios value trust and loyalty in their relationships.<br><br>
+
+<span class="trait">
+FOCUSED AND DETERMINED:</span> Once they set their minds to something, Scorpios exhibit a remarkable level of focus and determination. They are not easily swayed from their path.<br><br>
+
+<span class="trait">
+PASSIONATE AND SENSUAL:</span> In matters of romance and intimacy, Scorpios are known for their passionate and sensual nature. They seek deep emotional connections and are not afraid to express their desires.<br><br>
+
+<span class="trait">
+INQUISITIVE AND INVESTIGATIVE:</span> Scorpios have a natural curiosity and a desire to uncover the truth. They are often drawn to mysteries and enjoy delving beneath the surface to discover hidden meanings.<br><br>
+
+<span class="trait">
+INDEPENDENT AND SELF-RELIANT:</span> While they value relationships, Scorpios also have a strong sense of independence. They are self-reliant and capable of taking care of themselves.<br><br>
+
+These traits collectively shape the Scorpio personality, making them complex and intriguing individuals who often leave a lasting impression on those around them.</p> 
+
+</div> 
+<div class="modal-footer"> 
+<button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Close &times;
+</button> 
+</div> 
+</div> 
+</div> 
+</div>
+<!--End Second Star Sign-->
+
+<!--Second Star Sign-->
+<div id="myModal9" class="modal fade" >
+<div class="modal-dialog; modal-lg"> 
+<div class="modal-content"> 
+<div class="modal-header"> 
+
+<h5 style="text-align: center" class="modal-title">NUMBER 9 SAGITTARIUS ZODIAC SIGN ♐.</h5> 
+</div> 
+<div class="modal-body; level" style="color: gray"> 
+
+<br><div style="background: teal; border: groove white 2px; border-radius: 8px"><a   href="sagittarius.png" Download="sagittarius.png">
+<img class="zodiac" src="sagittarius.png"/></a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<img class="zodiac" src="sagittarius2.png"/></div><br>
+
+<p class="horoscope1">People born under the Sagittarius sign, November 22 - December 21, are known for several characteristic traits:<br><br>
+
+<span class="trait">
+ADVENTUROUS:</span> Sagittarians have a deep love for adventure and exploration. They are constantly seeking new experiences and challenges.<br><br>
+
+<span class="trait">
+OPTIMISTIC:</span> They tend to have a positive outlook on life and are usually cheerful and enthusiastic.
+<br><br>
+	
+<span class="trait">
+INDEPENDENT:</span> Sagittarians value their freedom and independence. They prefer to chart their own course in life.
+<br><br>
+	
+<span class="trait">
+PHILOSOPHICAL:</span> They have a curious and philosophical nature, often pondering the deeper meanings of life and existence.
+<br><br>
+	
+<span class="trait">
+HONEST:</span> Sagittarians are known for their honesty and straightforwardness. They speak their mind and value truthfulness.
+<br><br>
+	
+<span class="trait">
+GENEROUS:</span> They have a generous spirit and are often willing to help others, especially if it involves sharing knowledge or experiences.
+<br><br>
+	
+<span class="trait">
+EXTROVERTED:</span> Sagittarians are typically outgoing and sociable, enjoying the company of others and making new friends easily.
+<br><br>
+	
+<span class="trait">
+RESTLESS:</span> They can be impatient and dislike routine or restrictions that hinder their freedom to explore and learn.
+<br><br>
+	
+<span class="trait">
+INTELLIGENT:</span> Sagittarians are usually intellectually curious and enjoy learning about a wide range of subjects.<br><br>
+
+<span class="trait">
+UNPREDICTABLE:</span> Due to their adventurous nature, they may sometimes be unpredictable or spontaneous in their actions.
+<br><br>
+
+These traits combine to form a personality that is adventurous, optimistic, and intellectually curious, with a strong sense of independence and honesty.</p> 
+
+</div> 
+<div class="modal-footer"> 
+<button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Close &times;
+</button> 
+</div> 
+</div> 
+</div> 
+</div>
+<!--End Second Star Sign-->
+
+<!--Second Star Sign-->
+<div id="myModal10" class="modal fade" >
+<div class="modal-dialog; modal-lg"> 
+<div class="modal-content"> 
+<div class="modal-header"> 
+
+<h5 style="text-align: center" class="modal-title">NUMBER 10 CAPRICORN ZODIAC SIGN ♑.</h5> 
+</div> 
+<div class="modal-body; level" style="color: gray"> 
+
+<br><div style="background: teal; border: groove white 2px; border-radius: 8px"><a href="capricorn.png" Download="capricorn.png">
+<img class="zodiac" src="capricorn.png"/></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<img class="zodiac" src="capricorn2.png"/></div><br>
+
+<p class="horoscope1">People born under the Capricorn sign, which typically spans from December 22nd to January 19th, are known for several distinctive characteristics:<br><br>
+
+<span class="trait">
+AMBITIOUS:</span> Capricorns are highly ambitious and goal-oriented individuals. They are driven to succeed in their careers and personal endeavors.<br><br>
+
+<span class="trait">
+RESPONSIBLE:</span> They are known for their strong sense of responsibility and reliability. Capricorns are often seen as the ones who can be counted on to get things done.<br><br>
+
+<span class="trait">
+DISCIPLINED:</span> Capricorns possess great self-discipline and perseverance. They are willing to work hard and endure challenges to achieve their long-term goals.
+<br><br>
+	
+<span class="trait">
+PRACTICAL:</span> They have a practical and pragmatic approach to life. Capricorns are grounded in reality and prefer to focus on what is tangible and achievable.
+<br><br>
+	
+<span class="trait">
+RESERVED:</span> Capricorns can be somewhat reserved or cautious when it comes to expressing emotions. They may prefer to keep their feelings private.<br><br>
+
+<span class="trait">
+PATIENT:</span> They exhibit patience, especially when it comes to achieving their ambitions. Capricorns understand that success often requires gradual progress over time.<br><br>
+
+<span class="trait">
+TRADITIONAL:</span> Capricorns tend to value tradition and stability. They may have a strong respect for established norms and may prefer conventional methods.<br><br>
+
+<span class="trait">
+CAPABLE LEADERS:</span> They often possess strong leadership qualities. Capricorns can take charge and excel in positions of authority or responsibility.
+<br><br>
+
+<span class="trait">
+FOCUSED ON REPUTATION:</span> They are concerned with their reputation and how they are perceived by others. Capricorns strive to maintain a good image and uphold their integrity.
+<br><br>
+	
+<span class="trait">
+CAUTIOUS WITH TRUST:</span> Capricorns may be cautious when it comes to trusting others. They value loyalty and reliability in their relationships.<br><br>
+    	
+These traits collectively make Capricorns determined, dependable individuals who are often respected for their hard work and commitment to achieving their ambitions.</p> 
+</div> 
+<div class="modal-footer"> 
+<button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Close &times;
+</button> 
+</div> 
+</div> 
+</div> 
+</div>
+<!--End Second Star Sign-->
+
+<!--Second Star Sign-->
+<div id="myModal11" class="modal fade" >
+<div class="modal-dialog; modal-lg"> 
+<div class="modal-content"> 
+<div class="modal-header"> 
+
+<h5 style="text-align: center" class="modal-title">NUMBER 11 AQUARIUS ZODIAC SIGN ♒.</h5> 
+</div> 
+<div class="modal-body; level" style="color: gray"> 
+
+<br><div style="background: teal; border: groove white 2px; border-radius: 8px"><a href="aquarius.png" Download="aquarius.png">
+<img class="zodiac" src="aquarius.png"/></a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<img class="zodiac" src="aquarius2.png"/></div><br>
+
+<p class="horoscope1">People born under the Aquarius sign, which typically spans from January 20th to February 18th, are known for several distinctive characteristics:<br><br>
+
+<span class="trait">
+INDEPENDENT:</span> Aquarians value their independence greatly and often prefer to do things their own way.<br><br>
+
+<span class="trait">
+INTELLECTUAL:</span> They are often deep thinkers who enjoy intellectual conversations and exploring new ideas.<br><br>
+
+<span class="trait">
+HUMANITARIAN:</span> Aquarians have a strong sense of social justice and often advocate for causes they believe in.<br><br>
+
+<span class="trait">
+PROGRESSIVE:</span> They tend to be forward-thinking and open to new ways of doing things, often embracing innovation and change.
+<br><br>
+	
+<span class="trait">
+UNCONVENTIONAL:</span> Aquarians are known for their unique perspective and may have unconventional or eccentric qualities.<br><br>
+
+<span class="trait">
+FRIENDLY AND SOCIABLE:</span> Despite their independence, they are generally friendly and enjoy being around people, although they may also appreciate alone time.<br><br>
+
+<span class="trait">
+DETACHED:</span> At times, Aquarians can appear detached or aloof, as they value rationality and logic over emotional reactions.<br><br>
+
+<span class="trait">
+IDEALISTIC:</span> They often have strong ideals and visions for the future, striving to make the world a better place in their own way.
+<br><br>
+
+<span class="trait">
+FIXED IN OPINIONS:</span> Aquarians can be quite stubborn when it comes to their beliefs and opinions, as they are confident in their own ideas.
+<br><br>
+	
+<span class="trait">
+REBELLIOUS:</span> They may resist authority or traditional norms if they feel these hinder progress or individual freedom.
+<br><br>
+	
+These traits collectively make Aquarians intriguing and often ahead of their time in terms of ideas and perspectives.</p>
+</div> 
+<div class="modal-footer"> 
+<button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Close &times;
+</button> 
+</div> 
+</div> 
+</div> 
+</div>
+<!--End Second Star Sign-->
+
+<!--Second Star Sign-->
+<div id="myModal12" class="modal fade" >
+<div class="modal-dialog; modal-lg"> 
+<div class="modal-content"> 
+<div class="modal-header"> 
+
+<h5 style="text-align: center" class="modal-title">NUMBER 12 PISCES ZODIAC SIGN ♓.</h5> 
+</div> 
+<div class="modal-body; level" style="color: gray"> 
+
+<br><div style="background: teal; border: groove white 2px; border-radius: 8px"> <a href="pisces.png" Download="pisces.png">
+<img class="zodiac" src="pisces.png"/></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<img class="zodiac" src="pisces2.png"/></div><br>
+
+<p class="horoscope1">People born under the Pisces sign, which typically spans from February 19th to March 20th, are known for several distinctive characteristics:<br><br>
+
+<span class="trait">
+EMPATHETIC AND COMPASSIONATE:</span> Pisceans are deeply empathetic individuals who are sensitive to the feelings and emotions of others. They often show compassion and understanding.<br><br>
+
+<span class="trait">
+IMAGINATIVE AND CREATIVE:</span> They have a rich inner world and are often drawn to creative pursuits such as art, music, or writing. Their imagination knows few bounds.<br><br>
+
+<span class="trait">
+INTUITIVE:</span> Pisceans tend to rely on their intuition and gut feelings when making decisions. They are often guided by their instincts rather than logic alone.
+<br><br>
+	
+<span class="trait">
+ADAPTABLE:</span> They are generally flexible and adaptable, able to go with the flow and adjust to changing circumstances.<br><br>
+
+<span class="trait">
+IDEALISTIC:</span> Pisceans often have a strong sense of idealism and may have dreams or visions that guide their lives. They may strive for a utopian world or seek to make a positive difference.
+<br><br>
+	
+<span class="trait">
+SPIRITUAL:</span> Many Pisceans have a spiritual side and may be drawn to mystical or metaphysical interests. They may seek deeper meaning in life beyond the material.<br><br>
+
+<span class="trait">
+ESCAPIST:</span> At times, Pisceans may retreat into their own world as a way to escape the harsh realities of life. This can manifest as daydreaming, fantasy, or even addictive behaviors.
+<br><br>
+	
+<span class="trait">
+SELFLESS AND GENEROUS:</span> They are often generous with their time, energy, and resources, willing to help others without expecting anything in return.
+<br><br>
+	
+<span class="trait">
+EMOTIONALLLY VULNERABLE:</span> Pisceans can be deeply affected by their emotions and may struggle with boundaries at times, feeling the emotions of others as if they were their own.<br><br>
+
+<span class="trait">
+INDECISIVE:</span> Due to their empathetic nature and desire to consider all perspectives, Pisceans can sometimes struggle with decision-making and may seek guidance from others.<br><br>
+
+These traits collectively make Pisceans compassionate, imaginative individuals who often bring a unique perspective to relationships and creative endeavors.</p> 
+
+<div class="ui" id = "dialog-7" title = "Welcome to Seer.">What does your Zodiac Sign 🌘 say about you. Do you even know it, well it is a special way to understand more about your self & how you might get along with others. Zodiac signs are based upon when you were born 📆 & can tell you about your personality,  who you  might be friends 👥 with and even the kind of things you might be good at 🏇... see help.</div>
+
+<div class="ui" id = "dialog-8" title = "Welcome to Seer.">👦Hie! This programme is created using the Horoscope🌒. Select your Star Sign on the drop-down list, depending on your Date and Month of Birth. The Zodiac has twelve signs, your Date and Month 📆 of Birth falls within any of these Signs. This is clear from the drop-down list. Zodiac signs are 12 different symbols that come from the stars 🌘. In ancient times people looked at the night sky & divide it into twelve parts, with each part named after the constellation they saw. Your Zodiac sign depends on which part of the sky the sun  was in when you were born 👶. Myself a'm an Aquarius ♌.</div>
+
+</div> 
+<div class="modal-footer"> 
+<button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Close &times;
+</button> 
+</div> 
+</div> 
+</div> 
+</div>
+<!--End Second Star Sign--> 
+
+<div class="footer">
+<footer>&copy2024 | All Rights Reserved | SM Technology</footer>
+</div>
+	
+	<script src="jquery.min.js"defer></script>
+	
+	<script src="jquery-ui.min.js"defer></script>
+	
+	<script src="bootstrap.min.js"defer></script>
+	
+	<script src="seer.js"defer></script>
+	
+ </body>
+ </html>
