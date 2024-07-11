@@ -415,7 +415,7 @@ open("https://salmandascript.github.io/SM Technology/smtech.html");
 
 
 function linkWikipedia(){
-open("https://salmandascript.github.io/LinkWikipedia/");
+open("https://salmandascript.github.io/LinkWikipedia-/");
 }
 
 function seer(){
@@ -435,7 +435,7 @@ open("https://salmandascript.github.io/Salmandamusiq/");
 }
 
 function newsChannel(){
-open("https://salmandascript.github.io/NewsChannel/");
+open("https://salmandascript.github.io/NewsChannel1/");
 }
 
 function movieChannel(){
